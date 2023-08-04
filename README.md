@@ -1,73 +1,70 @@
-# prototype_react
-a prototype for a react project
-=======
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Dependencies:
 
-## Available Scripts
+1. **@testing-library/jest-dom** (v5.17.0): Provides custom Jest matchers for DOM testing, making it easier to assert on the state of the DOM elements in your React components.
 
-In the project directory, you can run:
+2. **@testing-library/react** (v13.4.0): Testing utility library for React components that enables you to render and interact with components in tests to verify their behavior.
 
-### `npm start`
+3. **@testing-library/user-event** (v13.5.0): Provides simulated user events for React components in tests, making it easier to simulate user interactions such as typing, clicking, etc.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. **react** (v18.2.0): The core library for building user interfaces in React, providing the fundamental components and APIs for managing the application's state and rendering the UI.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+5. **react-dom** (v18.2.0): Provides the methods necessary to render React components into the DOM (Document Object Model) of the web page.
 
-### `npm test`
+6. **react-router-dom** (v6.14.2): Enables client-side routing for React applications, allowing you to create dynamic and declarative routes to navigate between different views without full page reloads.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+7. **react-scripts** (v5.0.1): A set of scripts and configurations for managing the development and build process of a create-react-app based project, including starting the development server, building the production version, and running tests.
 
-### `npm run build`
+8. **web-vitals** (v2.1.4): Library for measuring and reporting web vital metrics (such as Core Web Vitals) to help monitor and improve the performance of the web application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##  Install the dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+## Start the development server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+```
+Open your browser and go to http://localhost:3000 to see the application running.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Folder Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The project follows a well-organized folder structure:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+|-- public/
+|-- src/
+|   |-- assets/
+|   |-- components/
+|   |-- pages/
+|   |-- services/
+|   |-- styles/
+|   |-- App.js
+|   |-- index.js
+|-- .eslintrc
+|-- .prettierrc
+|-- package.json
+```
 
-## Learn More
+- **public/**: Contains the static assets and the root HTML file.
+- **src/**: Contains the source code of the application.
+- **assets/**: Holds static files like images, fonts, etc.
+- **components/**: Reusable UI components.
+- **pages/**: Top-level components representing individual pages/views.
+- **services/**: Utility functions or API services.
+- **styles/**: Global and component-specific styles written in Sass.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions are welcome! If you find any issues or have suggestions for improvement, feel free to open an issue or submit a pull request.
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This project is licensed under the [MIT License](LICENSE).
+```
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can customize this `README.md` file to better suit your specific project and add more details about its purpose, usage, and other relevant information.
