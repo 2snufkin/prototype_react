@@ -1,2 +1,5 @@
-export {PageNotFound} from "./PageNotFound"
-export {Test} from "./Test"
+export {PageNotFound} from "./PageNotFound";
+export {HomePage} from "./HomePage";
+export {Contact} from "./Contact";
+export {PricingPage} from "./PricingPage";
+export {ServicesPage} from "./ServicesPage";

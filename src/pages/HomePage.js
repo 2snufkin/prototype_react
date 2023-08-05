@@ -1,4 +1,6 @@
-export const Test = () => {
+import ServicesPage from "./ServicesPage";
+
+export const HomePage = () => {
     return (
         <main>
             <div
@@ -21,12 +23,13 @@ export const Test = () => {
                             </div>
                         </div>
                         <div className="hidden md:block w-1/2">
-                            <img src="https://via.placeholder.com/400" alt="Hero Image"
+                            <img src="https://via.placeholder.com/400" alt="Hero"
                                  className="rounded-lg shadow-lg" />
                         </div>
                     </div>
                 </div>
             </div>
+            <ServicesPage />
     </main>
         )
 }
