@@ -1,8 +1,16 @@
 import './App.css';
 import  {AllRoutes} from "../src/routes/AllRoutes"
+import {Footer, Header} from "./components/layout";
 function App() {
   return (
-           <AllRoutes />
+      <div className="flex flex-col min-h-screen">
+          <Header />
+          <div className="flex-grow">
+              <AllRoutes />
+          </div>
+          <Footer />
+      </div>
+
 
   );
 }
