@@ -5,7 +5,7 @@ export const AllRoutes = ()=> {
     return (
         <>
             <Routes>
-                <Route path="/" element={<HomePage />} />
+                <Route path="/" end element={<HomePage />} />
                 <Route path="/pricing" element={<PricingPage />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/services" element={<ServicesPage />} />

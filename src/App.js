@@ -1,4 +1,4 @@
-import './config/App.css';
+import './App.css';
 import  {AllRoutes} from "./routes/AllRoutes"
 import {Footer, Header} from "./components/layout";
 function App() {
