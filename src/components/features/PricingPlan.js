@@ -4,8 +4,8 @@ const PricingPlan = ({ title, price, features }) => {
             <h2 className="text-xl font-bold mb-4">{title}</h2>
             <div className="text-4xl font-bold mb-4">${price}</div>
             <ul className="text-gray-600">
-                {features.map((feature) => (
-                    <li key={title} className="py-1">
+                {features.map((feature, index) => (
+                    <li key={index} className="py-1">
                         {feature}
                     </li>
                 ))}
