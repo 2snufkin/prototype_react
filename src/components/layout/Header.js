@@ -1,13 +1,16 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react"; // Removed unnecessary import of useEffect
+import { useState } from "react";
+import {NavigationLink} from "../features/NavigationLink"; // Removed unnecessary import of useEffect
 
 export const Header = () => {
     const [hidden, setHidden] = useState(false);
 
-    const activeLink =
-        "block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent";
-    const inactiveLink =
-        "block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent";
+    const navigationLinks = [
+        {id: 1, name:"Home", link:"/"},
+        {id: 1, name:"Services", link:"/services"},
+        {id: 1, name:"Pricing", link:"/pricing"},
+        {id: 1, name:"Contact", link:"/contact"}
+    ]
 
     const toggleMenu = () => {
         setHidden((prevState) => !prevState);
@@ -65,38 +68,10 @@ export const Header = () => {
                         md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent
                         dark:border-gray-700`}
                         >
-                            <li>
-                                <NavLink
-                                    to="/"
-                                    className={ ({isActive}) => isActive? activeLink : inactiveLink}
-                                >
-                                    Home
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    to="/services"
-                                    className={ ({isActive}) => isActive? activeLink : inactiveLink}
-                                >
-                                    Services
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    to="/pricing"
-                                    className={ ({isActive}) => isActive? activeLink : inactiveLink}
-                                >
-                                    Pricing
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    to="/contact"
-                                    className={ ({isActive}) => isActive? activeLink : inactiveLink}
-                                >
-                                    Contact
-                                </NavLink>
-                            </li>
+
+                            {/*rendering nav link*/}
+                            {navigationLinks.map((navObject) => <NavigationLink nav={navObject}/>)}
+
                         </ul>
                     </div>
                 </div>
