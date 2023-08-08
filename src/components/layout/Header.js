@@ -1,15 +1,17 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import {NavigationLink} from "../features/NavigationLink"; // Removed unnecessary import of useEffect
+import {NavigationLink} from "../features/NavigationLink";
+import {DarkModeToggle} from "../features/DarkModeToggle"; // Removed unnecessary import of useEffect
 
 export const Header = () => {
     const [hidden, setHidden] = useState(false);
 
     const navigationLinks = [
         {id: 1, name:"Home", link:"/"},
-        {id: 1, name:"Services", link:"/services"},
-        {id: 1, name:"Pricing", link:"/pricing"},
-        {id: 1, name:"Contact", link:"/contact"}
+        {id: 2, name:"Services", link:"/services"},
+        {id: 3, name:"Pricing", link:"/pricing"},
+        {id: 4, name:"Dogs", link:"/dogs"},
+        {id: 5, name:"Contact", link:"/contact"}
     ]
 
     const toggleMenu = () => {
@@ -71,6 +73,7 @@ export const Header = () => {
 
                             {/*rendering nav link*/}
                             {navigationLinks.map((navObject) => <NavigationLink nav={navObject}/>)}
+                            <DarkModeToggle />
 
                         </ul>
                     </div>

@@ -1,3 +1,5 @@
+import { capitalizeFirstLetter } from '../../utilities/helpers'; // Adjust the path as needed
+
 const Service = ({ title, description, icon }) => {
     return (
         <div className="flex items-center mb-4">
@@ -8,7 +10,7 @@ const Service = ({ title, description, icon }) => {
             </div>
             <div className="ml-3">
                 <h3 className="text-xl font-bold">{title}</h3>
-                <p className="text-gray-600">{description}</p>
+                <p className="text-gray-600">{capitalizeFirstLetter(description)}</p>
             </div>
         </div>
     );
