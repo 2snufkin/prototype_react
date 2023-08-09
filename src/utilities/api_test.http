@@ -1,0 +1,2 @@
+## Get All Dogs
+GET https://api.thedogapi.com/v1/breeds
