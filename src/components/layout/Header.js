@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import {NavigationLink} from "../features/NavigationLink";
-import {DarkModeToggle} from "../features/DarkModeToggle"; // Removed unnecessary import of useEffect
+import {DarkModeToggle} from "../shared/DarkModeToggle"; // Removed unnecessary import of useEffect
 
 export const Header = () => {
     const [hidden, setHidden] = useState(false);
@@ -72,7 +72,7 @@ export const Header = () => {
                         >
 
                             {/*rendering nav link*/}
-                            {navigationLinks.map((navObject) => <NavigationLink nav={navObject}/>)}
+                            {navigationLinks.map((navObject) => <NavigationLink key={navObject.id}      nav={navObject}/>)}
                             <DarkModeToggle />
 
                         </ul>

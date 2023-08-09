@@ -1,39 +1,27 @@
-import {useEffect, useState} from "react";
+import { useState, useEffect } from 'react';
 
-/**
- * A custom hook for fetching data from an API.
- * @param {string} api - The API endpoint URL to fetch data from.
- * @returns {Object} An object containing the fetched data.
- */
-const useFetch = (api)=> {
+function useFetch(url) {
     const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
 
-    // Effect to fetch data when the API URL changes
     useEffect(() => {
-        async function fetchAPI(apiString){
+        const fetchData = async () => {
+            setLoading(true);
             try {
-                const response = await fetch(apiString);
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
+                const response = await fetch(url);
                 const json = await response.json();
-                console.log(json)
-                // setData(json);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-                throw error;
+                console.log(`json: ${json}`)
+                setData(json);
+            } catch (err) {
+                setError(err);
             }
-        }
-        // Call the fetchAPI function with the provided API URL
-        fetchAPI(api);
+            setLoading(false);
+        };
 
-    },[api])
-
-    // Return the fetched data in an object you will access it with .data
-    console.log(data)
-    console.log({data})
-    // return {data}
-
-};
+        fetchData();
+    }, [url]);
+    return { data, loading, error };
+}
 
 export default useFetch;
