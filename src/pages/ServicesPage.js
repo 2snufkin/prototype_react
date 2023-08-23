@@ -4,7 +4,7 @@ export const ServicesPage = () => {
     const services = [
         {
             title: 'Web Development',
-            description: 'We build fast and responsive web applications using the latest technologies.',
+            description: 'we build fast and responsive web applications using the latest technologies.',
             icon: (
                 <path
                     strokeLinecap="round"
@@ -16,7 +16,7 @@ export const ServicesPage = () => {
         },
         {
             title: 'Mobile App Development',
-            description: 'We create mobile apps for both Android and iOS platforms to reach a broader audience.',
+            description: 'we create mobile apps for both Android and iOS platforms to reach a broader audience.',
             icon: (
                 <path
                     strokeLinecap="round"
@@ -28,7 +28,7 @@ export const ServicesPage = () => {
         },
         {
             title: 'UI/UX Design',
-            description: 'Our designers create stunning user interfaces and user experiences for your products.',
+            description: 'our designers create stunning user interfaces and user experiences for your products.',
             icon: (
                 <path
                     strokeLinecap="round"
