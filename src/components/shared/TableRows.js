@@ -17,10 +17,8 @@ const TableRows = (props) => {
                         {dog.breed_group}
                     </td>
                     <td>
-                        <img
-                            src={dog.image.url}
-                            alt={dog.name}
-                            className="h-auto w-auto max-h-[4em] max-w-[4em] transition-transform transform-gpu hover:scale-110"/>
+                        {dog.temperament}
+
                     </td>
 
 

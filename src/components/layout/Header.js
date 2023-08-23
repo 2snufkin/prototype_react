@@ -19,8 +19,8 @@ export const Header = () => {
     };
 
     return (
-        <header>
-            <nav className="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+        <header className="fixed top-0 left-0 right-0 z-50"> {/* Added fixed positioning */}
+            <nav className="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700 ">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <NavLink to="/" className="flex items-center">
                         <img
