@@ -1,4 +1,7 @@
-export const Contact =()=> {
+import {useTitle} from "../hooks/useTitle";
+
+export const Contact =({title})=> {
+    useTitle(title)
     return (
 
         <div className="container mx-auto px-4 py-8">

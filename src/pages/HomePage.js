@@ -1,8 +1,10 @@
 import ServicesPage from "./ServicesPage";
+import {useTitle} from "../hooks/useTitle";
 
-export const HomePage = () => {
+export const HomePage = ({title}) => {
+    useTitle(title)
+
     return (
-        <main>
             <div
                 className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 h-screen flex items-center justify-center">
                 <div className="max-w-5xl mx-auto p-6">
@@ -28,8 +30,7 @@ export const HomePage = () => {
                         </div>
                     </div>
                 </div>
+
             </div>
-            <ServicesPage />
-    </main>
         )
 }

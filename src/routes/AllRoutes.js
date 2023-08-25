@@ -6,13 +6,14 @@ export const AllRoutes = ()=> {
     return (
         <>
             <Routes>
-                <Route path="/" end element={<HomePage />} />
-                <Route path="/pricing" element={<PricingPage />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/services" element={<ServicesPage />} />
-                {/*you can pass data to the component*/}
-                <Route path="/dogs" element={<DogsPage />} />
-                <Route path="*" element={<PageNotFound />} />
+                {/*the title is for dynamic title in the tab. It only works with the DIY useTitle  hook*/}
+                <Route path="/" end element={<HomePage title="Home"/>} />
+                <Route path="/pricing" element={<PricingPage title="Pricing"/>} />
+                <Route path="/contact" element={<Contact title="Contact" />} />
+                <Route path="/services" element={<ServicesPage title="Services" />} />
+                {/*you can pass data to the component, like the title name */}
+                <Route path="/dogs" element={<DogsPage title="Dogs"/>} />
+                <Route path="*" element={<PageNotFound title="404"/>} />
             </Routes>
 
         </>

@@ -1,6 +1,8 @@
 import Service from '../components/features/Service';
+import {useTitle} from "../hooks/useTitle";
 
-export const ServicesPage = () => {
+export const ServicesPage = ({title}) => {
+    useTitle(title)
     const services = [
         {
             title: 'Web Development',

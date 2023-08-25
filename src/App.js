@@ -5,7 +5,7 @@ function App() {
   return (
       <div className="flex flex-col min-h-screen ">
           <Header />
-          <main className="flex-grow pt-16"> {/* Added pt-16 for padding top */}
+          <main className="flex-grow pt-16">
               <AllRoutes />
           </main>
           <Footer />

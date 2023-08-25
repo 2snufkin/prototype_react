@@ -1,6 +1,8 @@
 import PricingPlan from '../components/features/PricingPlan';
+import {useTitle} from "../hooks/useTitle";
 
-export const PricingPage = () => {
+export const PricingPage = ({title}) => {
+    useTitle(title)
     const plans = [
         {
             title: 'Basic',
