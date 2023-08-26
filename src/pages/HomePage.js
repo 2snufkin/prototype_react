@@ -1,4 +1,3 @@
-import ServicesPage from "./ServicesPage";
 import {useTitle} from "../hooks/useTitle";
 
 export const HomePage = ({title}) => {
